@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prisma - Modern Digital Agency</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Subtle interactive micro-animation for cards */
+        .hover-lift {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12) !important;
+        }
+
+        /* Carousel slide smooth image scaling */
+        .hero-zoom {
+            transform: scale(1);
+            transition: transform 7s ease-in-out;
+        }
+
+        .carousel-item.active .hero-zoom {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Contact Bar (Pure Bootstrap Utilities) -->
+    <header id="mainNavbar" class="bg-danger text-white d-none d-lg-block py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-4 fs-6 align-items-center">
+                <a href="mailto:hello@prisma-agency.com"
+                    class="text-white text-decoration-none d-flex align-items-center gap-1">
+                    <i class="ri-mail-send-line"></i> hello@prisma-agency.com
+                </a>
+                <a href="tel:+15552345678" class="text-white text-decoration-none d-flex align-items-center gap-1">
+                    <i class="ri-phone-fill"></i> +1 (555) 234-5678
+                </a>
+                <span class="text-white-50">|</span>
+                <span class="d-flex align-items-center gap-1 text-white-75">
+                    <i class="ri-time-line"></i> Mon - Fri: 9:00 AM - 6:00 PM
+                </span>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <a href="#"
+                    class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 32px; height: 32px;" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#"
+                    class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 32px; height: 32px;" title="Twitter"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"
+                    class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 32px; height: 32px;" title="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="#"
+                    class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 32px; height: 32px;" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#"
+                    class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 32px; height: 32px;" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar (Bootstrap Sticky Navbar) -->
+    <nav id="secondnav" class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-dark d-flex align-items-center gap-1" href="#home">
+                <span class="text-danger">P</span>risma<span class="text-danger">.</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-dark px-3" href="#contact">Contact</a></li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="#contact" class="btn btn-danger rounded-pill px-4 py-2 fw-semibold shadow-sm">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Bootstrap Carousel Component) -->
+    <div id="home" class="carousel slide carousel-fade bg-dark" data-bs-ride="carousel" data-bs-interval="6000">
+        <!-- Indicators -->
+        <div class="carousel-indicators mb-4">
+            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active rounded-pill"
+                aria-current="true" aria-label="Slide 1" style="width: 30px; height: 6px;"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="1" class="rounded-pill" aria-label="Slide 2"
+                style="width: 14px; height: 6px;"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="2" class="rounded-pill" aria-label="Slide 3"
+                style="width: 14px; height: 6px;"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active position-relative overflow-hidden"
+                style="min-height: 650px; height: 85vh;">
+                <!-- HD Background Image -->
+                <img src="https://images.unsplash.com/photo-1664575599730-0814817939de?auto=format&fit=crop&w=1920&q=85"
+                    class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hero-zoom"
+                    alt="Professional Design Workspace">
+                <!-- Bootstrap Dark Gradient Overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+
+                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                    <div class="row w-100 mx-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                            <span
+                                class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
+                                <i class="ri-sparkling-fill"></i> WE CRAFT DIGITAL EXPERIENCES
+                            </span>
+
+                            <h1
+                                class="display-4 display-md-3 fw-bolder text-white text-uppercase lh-sm mb-3 text-break">
+                                DESIGN DRIVEN FOR <br class="d-none d-md-block" />
+                                <span class="text-danger">PROFESSIONALS</span>
+                            </h1>
+
+                            <p class="lead text-white text-opacity-75 col-lg-10 col-xl-9 mb-4">
+                                Transforming visionary ideas into award-winning digital experiences, high-converting
+                                platforms, and iconic brand identities that drive scalable growth.
+                            </p>
+
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                                <a href="#about"
+                                    class="btn btn-danger btn-lg rounded-pill px-4 py-3 fw-semibold shadow d-inline-flex align-items-center gap-2">
+                                    <span>Get Started</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                                <a href="#services"
+                                    class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold d-inline-flex align-items-center gap-2">
+                                    <i class="ri-play-circle-line fs-5"></i>
+                                    <span>Learn More</span>
+                                </a>
+                            </div>
+
+                            <!-- Trust Metrics Strip -->
+                            <div
+                                class="pt-4 border-top border-white border-opacity-25 d-flex flex-wrap align-items-center gap-3 gap-sm-4 text-white">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-checkbox-circle-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">99% Satisfaction</h6>
+                                        <small class="text-white-50">Proven Client Results</small>
+                                    </div>
+                                </div>
+
+                                <div class="vr bg-white opacity-25 d-none d-sm-block" style="height: 32px;"></div>
+
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-award-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">500+ Projects</h6>
+                                        <small class="text-white-50">Delivered Worldwide</small>
+                                    </div>
+                                </div>
+
+                                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 32px;"></div>
+
+                                <div class="d-flex align-items-center gap-2 d-none d-md-flex">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-customer-service-2-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">24/7 Support</h6>
+                                        <small class="text-white-50">Dedicated Expert Team</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item position-relative overflow-hidden" style="min-height: 650px; height: 85vh;">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=85"
+                    class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hero-zoom"
+                    alt="Creative Digital Studio">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+
+                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                    <div class="row w-100 mx-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                            <span
+                                class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
+                                <i class="ri-rocket-2-fill"></i> NEXT-GENERATION AGENCY
+                            </span>
+
+                            <h1
+                                class="display-4 display-md-3 fw-bolder text-white text-uppercase lh-sm mb-3 text-break">
+                                BUILDING TOMORROW'S <br class="d-none d-md-block" />
+                                <span class="text-danger">TECH EXPERIENCES</span>
+                            </h1>
+
+                            <p class="lead text-white text-opacity-75 col-lg-10 col-xl-9 mb-4">
+                                Empowering modern enterprises with pixel-perfect web design, high-performance web
+                                applications, and data-driven marketing campaigns.
+                            </p>
+
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                                <a href="#projects"
+                                    class="btn btn-danger btn-lg rounded-pill px-4 py-3 fw-semibold shadow d-inline-flex align-items-center gap-2">
+                                    <span>View Projects</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                                <a href="#services"
+                                    class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold d-inline-flex align-items-center gap-2">
+                                    <i class="ri-apps-2-line fs-5"></i>
+                                    <span>Our Services</span>
+                                </a>
+                            </div>
+
+                            <div
+                                class="pt-4 border-top border-white border-opacity-25 d-flex flex-wrap align-items-center gap-3 gap-sm-4 text-white">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-user-heart-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">90K+ Clients</h6>
+                                        <small class="text-white-50">Happy Partners</small>
+                                    </div>
+                                </div>
+                                <div class="vr bg-white opacity-25 d-none d-sm-block" style="height: 32px;"></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-code-s-slash-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">45M+ Lines</h6>
+                                        <small class="text-white-50">Robust Code</small>
+                                    </div>
+                                </div>
+                                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 32px;"></div>
+                                <div class="d-flex align-items-center gap-2 d-none d-md-flex">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-star-smile-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">5-Star Rated</h6>
+                                        <small class="text-white-50">Industry Standard</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item position-relative overflow-hidden" style="min-height: 650px; height: 85vh;">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=85"
+                    class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hero-zoom"
+                    alt="Innovative Digital Workspace">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+
+                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                    <div class="row w-100 mx-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                            <span
+                                class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
+                                <i class="ri-flashlight-fill"></i> INNOVATION & RESULTS
+                            </span>
+
+                            <h1
+                                class="display-4 display-md-3 fw-bolder text-white text-uppercase lh-sm mb-3 text-break">
+                                CREATIVE EXCELLENCE <br class="d-none d-md-block" />
+                                <span class="text-danger">WITHOUT LIMITS</span>
+                            </h1>
+
+                            <p class="lead text-white text-opacity-75 col-lg-10 col-xl-9 mb-4">
+                                Combining cutting-edge design trends, agile engineering, and human-centric user research
+                                to build digital products that captivate and convert.
+                            </p>
+
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                                <a href="#contact"
+                                    class="btn btn-danger btn-lg rounded-pill px-4 py-3 fw-semibold shadow d-inline-flex align-items-center gap-2">
+                                    <span>Contact Us</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                                <a href="#team"
+                                    class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold d-inline-flex align-items-center gap-2">
+                                    <i class="ri-team-line fs-5"></i>
+                                    <span>Meet the Team</span>
+                                </a>
+                            </div>
+
+                            <div
+                                class="pt-4 border-top border-white border-opacity-25 d-flex flex-wrap align-items-center gap-3 gap-sm-4 text-white">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-timer-flash-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">Fast Delivery</h6>
+                                        <small class="text-white-50">On-Time Always</small>
+                                    </div>
+                                </div>
+                                <div class="vr bg-white opacity-25 d-none d-sm-block" style="height: 32px;"></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-global-line fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">Global Reach</h6>
+                                        <small class="text-white-50">25+ Countries</small>
+                                    </div>
+                                </div>
+                                <div class="vr bg-white opacity-25 d-none d-md-block" style="height: 32px;"></div>
+                                <div class="d-flex align-items-center gap-2 d-none d-md-flex">
+                                    <div class="bg-danger bg-opacity-25 text-danger rounded-3 p-2 d-flex align-items-center justify-content-center"
+                                        style="width: 38px; height: 38px;">
+                                        <i class="ri-shield-check-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-white">Enterprise Ready</h6>
+                                        <small class="text-white-50">Secure & Scalable</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev"
+            aria-label="Previous Slide">
+            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next"
+            aria-label="Next Slide">
+            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <!-- About Section (Pure Bootstrap 5 Grid & Cards) -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-lightbulb-line me-1"></i> About Prisma
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-4">
+                        We Craft Digital Experiences That Drive <span class="text-danger">Real Business Growth</span>
+                    </h2>
+                    <p class="lead text-muted mb-4 fs-6">
+                        Prisma is a forward-thinking digital agency. We blend award-winning aesthetic design, robust
+                        software engineering, and data-backed marketing strategies to elevate modern businesses into
+                        industry leaders.
+                    </p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Feature 1 -->
+                        <div class="d-flex gap-3 align-items-start p-3 rounded-4 bg-light shadow-sm hover-lift">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 58px; height: 58px;">
+                                <i class="ri-megaphone-line"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 text-dark">Data-Driven Digital Marketing</h5>
+                                <p class="text-muted mb-0 small">Multi-channel performance campaigns designed to
+                                    maximize ROI, customer retention, and inbound conversion.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="d-flex gap-3 align-items-start p-3 rounded-4 bg-light shadow-sm hover-lift">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 58px; height: 58px;">
+                                <i class="ri-mail-send-line"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 text-dark">High-Converting Email Funnels</h5>
+                                <p class="text-muted mb-0 small">Targeted lifecycle email sequences and intelligent
+                                    customer automation engineered to boost lifetime value.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="d-flex gap-3 align-items-start p-3 rounded-4 bg-light shadow-sm hover-lift">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 58px; height: 58px;">
+                                <i class="ri-line-chart-line"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 text-dark">Business Strategy & Scale</h5>
+                                <p class="text-muted mb-0 small">Strategic advisory helping high-growth startups and
+                                    established brands modernize their digital presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="position-relative mx-auto" style="max-width: 520px;">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80"
+                            class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover"
+                            alt="Prisma Collaborative Team Session" style="height: 480px;">
+
+                        <!-- Floating Experience Badge (Bootstrap Position & Shadow) -->
+                        <div
+                            class="position-absolute bottom-0 end-0 m-4 bg-white p-3 rounded-4 shadow-lg border-start border-5 border-danger d-none d-sm-flex align-items-center gap-3">
+                            <div class="bg-danger text-white rounded-circle p-2 d-flex align-items-center justify-content-center"
+                                style="width: 44px; height: 44px;">
+                                <i class="ri-award-fill fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold mb-0 text-dark">12+ Years</h4>
+                                <small class="text-muted fw-semibold">Industry Excellence</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section (Bootstrap Color & Utilities) -->
+    <section class="py-5 bg-danger text-white">
+        <div class="container py-3">
+            <div class="row text-center g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
+                        <i class="ri-user-smile-line display-5 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-5 fw-bold mb-1">90K+</h2>
+                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                            Happy Clients</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
+                        <i class="ri-code-s-slash-line display-5 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-5 fw-bold mb-1">45M+</h2>
+                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                            Lines of Code</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
+                        <i class="ri-trophy-line display-5 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-5 fw-bold mb-1">250+</h2>
+                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                            Awards Won</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
+                        <i class="ri-group-line display-5 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-5 fw-bold mb-1">380K+</h2>
+                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                            Community Reach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Bootstrap 5 Card Grid) -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container py-lg-4">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-service-line me-1"></i> Our Services
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-3">Comprehensive Digital Solutions</h2>
+                    <p class="lead text-muted fs-6">
+                        We deliver results-driven strategies and end-to-end digital craftsmanship tailored to help your
+                        company scale effectively.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-megaphone-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Digital Marketing</h5>
+                            <p class="card-text text-muted mb-4">Omnichannel growth strategies combining SEO, PPC, and
+                                content marketing to drive qualified leads.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-palette-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Logo & Visual Design</h5>
+                            <p class="card-text text-muted mb-4">Timeless logo creation and artistic assets that
+                                visually articulate your company's core values.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-briefcase-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Strategic Consulting</h5>
+                            <p class="card-text text-muted mb-4">Executive advisory to help you make informed
+                                architectural decisions and achieve sustainable growth.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-layout-masonry-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">UI/UX & Design Systems</h5>
+                            <p class="card-text text-muted mb-4">Modern design systems, user journeys, and clean
+                                interfaces that turn casual visitors into loyal customers.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-fingerprint-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Brand Identity Solutions</h5>
+                            <p class="card-text text-muted mb-4">Holistic brand guidelines, typography standards, and
+                                stationery to create an unforgettable market footprint.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift">
+                        <div class="card-body p-0">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-4 p-3 fs-2 d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="ri-shield-keyhole-line"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Cloud Security & QA</h5>
+                            <p class="card-text text-muted mb-4">Comprehensive vulnerability testing, penetration
+                                audits, and enterprise-grade security protocols.</p>
+                            <a href="#contact"
+                                class="text-danger fw-bold text-decoration-none d-inline-flex align-items-center gap-1">
+                                <span>Learn More</span> <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Successful Projects Section (Bootstrap Card Image Overlays) -->
+    <section id="projects" class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-briefcase-4-line me-1"></i> Featured Work
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-3">Our Recent Success Stories</h2>
+                    <p class="lead text-muted fs-6">
+                        Explore our portfolio of high-impact digital products, web platforms, and transformative
+                        campaigns engineered for world-class clients.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            alt="Next-Gen Fintech Portal">
+                        <div
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">FinTech / Web
+                                App</span>
+                            <h4 class="card-title fw-bold mb-1">Next-Gen Wealth & Investment Portal</h4>
+                            <p class="card-text text-white-50 small mb-3">Real-time portfolio analytics and
+                                high-frequency trading interface for 500k+ global users.</p>
+                            <div>
+                                <a href="#contact"
+                                    class="btn btn-outline-light btn-sm rounded-pill px-3 py-2 fw-semibold">View Case
+                                    Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            alt="E-Commerce Brand Transformation">
+                        <div
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">E-Commerce /
+                                Branding</span>
+                            <h4 class="card-title fw-bold mb-1">Direct-To-Consumer Lifestyle Store</h4>
+                            <p class="card-text text-white-50 small mb-3">Headless Shopify Plus store that boosted
+                                digital conversion rates by 142% within 90 days.</p>
+                            <div>
+                                <a href="#contact"
+                                    class="btn btn-outline-light btn-sm rounded-pill px-3 py-2 fw-semibold">View Case
+                                    Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80"
+                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            alt="Cloud SaaS Intelligence">
+                        <div
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">SaaS /
+                                Cloud</span>
+                            <h4 class="card-title fw-bold mb-1">Enterprise Cloud Monitoring Dashboard</h4>
+                            <p class="card-text text-white-50 small mb-3">Designed an interactive observability
+                                dashboard for distributed cloud microservices.</p>
+                            <div>
+                                <a href="#contact"
+                                    class="btn btn-outline-light btn-sm rounded-pill px-3 py-2 fw-semibold">View Case
+                                    Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
+                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            alt="Telemedicine HealthTech Suite">
+                        <div
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">HealthTech /
+                                Mobile</span>
+                            <h4 class="card-title fw-bold mb-1">AI-Powered Telemedicine Application</h4>
+                            <p class="card-text text-white-50 small mb-3">Connecting over 2 million patients with
+                                licensed medical providers via secure video consultation.</p>
+                            <div>
+                                <a href="#contact"
+                                    class="btn btn-outline-light btn-sm rounded-pill px-3 py-2 fw-semibold">View Case
+                                    Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (Pure Bootstrap Cards) -->
+    <section id="team" class="py-5 bg-light">
+        <div class="container py-lg-4">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-team-line me-1"></i> Our Leadership
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-3">Meet the Creative Minds</h2>
+                    <p class="lead text-muted fs-6">
+                        A multidisciplinary team of designers, engineers, and strategists committed to pushing the
+                        boundaries of digital possibility.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                <!-- Member 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                            alt="Martin Hoffmann" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
+                            style="width: 130px; height: 130px;">
+                        <h5 class="fw-bold text-dark mb-1">Martin Hoffmann</h5>
+                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Chief Creative Officer
+                        </p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-twitter-x-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face"
+                            alt="Sophia Reynolds" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
+                            style="width: 130px; height: 130px;">
+                        <h5 class="fw-bold text-dark mb-1">Sophia Reynolds</h5>
+                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Head of UI/UX Design
+                        </p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-twitter-x-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-dribbble-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                            alt="Joshua Murphy" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
+                            style="width: 130px; height: 130px;">
+                        <h5 class="fw-bold text-dark mb-1">Joshua Murphy</h5>
+                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Growth & Marketing VP
+                        </p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-twitter-x-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-mail-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
+                            alt="Daniel Stewart" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
+                            style="width: 130px; height: 130px;">
+                        <h5 class="fw-bold text-dark mb-1">Daniel Stewart</h5>
+                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Lead Fullstack
+                            Architect</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-github-fill"></i></a>
+                            <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
+                                    class="ri-terminal-box-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonial Section (RemixIcon Fixed Stars) -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container py-lg-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="bg-danger bg-opacity-25 text-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-4"
+                        style="width: 64px; height: 64px;">
+                        <i class="ri-double-quotes-l fs-2"></i>
+                    </div>
+
+                    <p class="lead mb-4 fs-4 text-white-50" style="line-height: 1.8;">
+                        "Working with Prisma has been an absolute game-changer for our organization. Their team revamped
+                        our entire digital presence and software infrastructure. In just four months, our qualified
+                        inbound conversions increased by 160%. They are strategic, proactive, and truly best-in-class."
+                    </p>
+
+                    <!-- Rating Stars with RemixIcon -->
+                    <div class="mb-3 text-warning fs-5">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
+                            alt="Sarah Johnson" class="rounded-circle border border-2 border-danger object-fit-cover"
+                            style="width: 60px; height: 60px;">
+                        <div class="text-start">
+                            <h5 class="fw-bold mb-0 text-white">Sarah Johnson</h5>
+                            <small class="text-white-50">Chief Executive Officer, TechCorp Global</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="blog" class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-article-line me-1"></i> Latest Insights
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-3">Industry News & Thought Leadership</h2>
+                    <p class="lead text-muted fs-6">
+                        Stay ahead of digital trends with actionable guides, design case studies, and engineering
+                        breakdowns from our team.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=350&fit=crop"
+                            alt="Web Design Trends" class="card-img-top object-fit-cover" style="height: 220px;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1">UI/UX
+                                    Design</span>
+                                <small class="text-muted"><i class="ri-time-line"></i> 5 min read</small>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Top Design Systems Shaping the Web in 2025
+                            </h5>
+                            <p class="card-text text-muted mb-4">How component-driven design systems empower engineering
+                                velocity and coherent user journeys.</p>
+                            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                                <small class="text-muted">January 15, 2025</small>
+                                <a href="#contact" class="text-danger fw-bold text-decoration-none">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=350&fit=crop"
+                            alt="SEO Strategies" class="card-img-top object-fit-cover" style="height: 220px;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1">Marketing &
+                                    SEO</span>
+                                <small class="text-muted"><i class="ri-time-line"></i> 7 min read</small>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Mastering AI Search & Core Web Vitals</h5>
+                            <p class="card-text text-muted mb-4">Navigating the transition to AI-assisted search engines
+                                while maintaining top organic search ranking.</p>
+                            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                                <small class="text-muted">January 10, 2025</small>
+                                <a href="#contact" class="text-danger fw-bold text-decoration-none">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden hover-lift">
+                        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=600&h=350&fit=crop"
+                            alt="Micro Interactions" class="card-img-top object-fit-cover" style="height: 220px;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span
+                                    class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1">Engineering</span>
+                                <small class="text-muted"><i class="ri-time-line"></i> 4 min read</small>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">The Psychology of Micro-Interactions in Apps
+                            </h5>
+                            <p class="card-text text-muted mb-4">Why subtle animations and feedback loops drastically
+                                reduce user bounce rates on key conversion steps.</p>
+                            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                                <small class="text-muted">January 5, 2025</small>
+                                <a href="#contact" class="text-danger fw-bold text-decoration-none">Read More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Section (Pure Bootstrap 5 Form) -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-lg-4">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <span
+                        class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
+                        <i class="ri-mail-send-line me-1"></i> Contact Us
+                    </span>
+                    <h2 class="display-5 fw-bold text-dark mb-3">Let's Discuss Your Next Big Project</h2>
+                    <p class="lead text-muted fs-6">
+                        Have an ambitious project in mind? Reach out to our strategy team and get a free project
+                        consultation within 24 hours.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Contact Information Card -->
+                <div class="col-lg-5">
+                    <div
+                        class="card border-0 shadow-sm rounded-4 p-4 p-md-5 h-100 bg-white d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-4">Contact Information</h4>
+
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="ri-map-pin-2-line fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-dark">Global Headquarters</h6>
+                                    <p class="text-muted mb-0 small">350 Fifth Avenue, 24th Floor<br>New York, NY 10118,
+                                        USA</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="ri-mail-line fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-dark">Email Inquiries</h6>
+                                    <p class="text-muted mb-0 small">
+                                        <a href="mailto:hello@prisma-agency.com"
+                                            class="text-decoration-none text-muted">hello@prisma-agency.com</a><br>
+                                        <a href="mailto:support@prisma-agency.com"
+                                            class="text-decoration-none text-muted">support@prisma-agency.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="ri-phone-line fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-dark">Direct Line</h6>
+                                    <p class="text-muted mb-0 small">
+                                        <a href="tel:+15552345678" class="text-decoration-none text-muted">+1 (555)
+                                            234-5678</a><br>
+                                        <a href="tel:+15559876543" class="text-decoration-none text-muted">+1 (555)
+                                            987-6543</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-start">
+                                <div class="bg-danger bg-opacity-10 text-danger rounded-3 p-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 48px; height: 48px;">
+                                    <i class="ri-time-line fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-dark">Operating Hours</h6>
+                                    <p class="text-muted mb-0 small">Monday – Friday: 9:00 AM – 6:00 PM EST<br>Weekend
+                                        Emergency Support Available</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability Indicator -->
+                        <div class="mt-4 pt-3 border-top d-flex align-items-center gap-2">
+                            <span class="badge bg-success rounded-circle p-1" style="width: 10px; height: 10px;">
+                            </span>
+                            <small class="text-muted fw-semibold">Strategists are online now & ready to consult.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Bootstrap Form Controls) -->
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 h-100 bg-white">
+                        <h4 class="fw-bold text-dark mb-4">Send Us a Direct Message</h4>
+                        <form
+                            onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been sent successfully. A Prisma specialist will contact you within 24 hours.');">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-dark small">Your Name *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i
+                                                class="ri-user-line text-muted"></i></span>
+                                        <input type="text" class="form-control border-start-0 ps-0"
+                                            placeholder="e.g. John Doe" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-dark small">Your Email *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i
+                                                class="ri-mail-line text-muted"></i></span>
+                                        <input type="email" class="form-control border-start-0 ps-0"
+                                            placeholder="e.g. john@company.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-dark small">Service Needed</label>
+                                    <select class="form-select">
+                                        <option selected>Select a Service...</option>
+                                        <option value="1">Digital Marketing & SEO</option>
+                                        <option value="2">Brand & Identity Design</option>
+                                        <option value="3">UI/UX Web & Mobile App</option>
+                                        <option value="4">Strategic Business Consulting</option>
+                                        <option value="5">Cloud Security & Testing</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-dark small">Estimated Budget</label>
+                                    <select class="form-select">
+                                        <option selected>$5,000 – $15,000</option>
+                                        <option value="1">$15,000 – $30,000</option>
+                                        <option value="2">$30,000 – $75,000</option>
+                                        <option value="3">$75,000+</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold text-dark small">Project Details *</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Tell us about your project goals, timeline, and current challenges..."
+                                        required></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-danger btn-lg rounded-pill px-4 py-3 fw-semibold shadow w-100 d-inline-flex align-items-center justify-content-center gap-2">
+                                        <span>Send Message</span>
+                                        <i class="ri-send-plane-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Multi-Column Footer (Bootstrap 5 Grid) -->
+    <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <!-- Col 1: About Prisma -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand fw-bold fs-2 text-white d-inline-flex align-items-center gap-1 mb-3"
+                        href="#home">
+                        <span class="text-danger">P</span>risma<span class="text-danger">.</span>
+                    </a>
+                    <p class="text-white-50 mb-4" style="line-height: 1.8;">
+                        Prisma is a premier digital experience agency delivering world-class brand identity, user
+                        interface design, and custom technology solutions for innovative enterprises globally.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#"
+                            class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                            style="width: 36px; height: 36px;" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"
+                            class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                            style="width: 36px; height: 36px;" title="Twitter"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#"
+                            class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                            style="width: 36px; height: 36px;" title="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#"
+                            class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                            style="width: 36px; height: 36px;" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"
+                            class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center p-0"
+                            style="width: 36px; height: 36px;" title="GitHub"><i class="ri-github-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                        <li><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Our Services</a></li>
+                        <li><a href="#projects" class="text-white-50 text-decoration-none">Case Studies</a></li>
+                        <li><a href="#team" class="text-white-50 text-decoration-none">Leadership</a></li>
+                        <li><a href="#blog" class="text-white-50 text-decoration-none">Insights & Blog</a></li>
+                        <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Core Services -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Our Services</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Digital Marketing & SEO</a>
+                        </li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Brand Identity & Logos</a>
+                        </li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">UI/UX Web & Mobile</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Enterprise Cloud Systems</a>
+                        </li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Security Audits & QA</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Strategic Consulting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Newsletter</h5>
+                    <p class="text-white-50 small mb-3">
+                        Subscribe to get our monthly briefing on emerging tech, UX insights, and marketing growth
+                        frameworks.
+                    </p>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Prisma insights!');">
+                        <div class="input-group mb-2">
+                            <input type="email"
+                                class="form-control rounded-start-pill bg-secondary bg-opacity-25 border-secondary text-white"
+                                placeholder="Enter your email..." required>
+                            <button class="btn btn-danger rounded-end-pill px-3" type="submit">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                        <small class="text-white-50" style="font-size: 0.75rem;">We respect your privacy. No spam
+                            ever.</small>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="border-secondary opacity-25">
+
+            <!-- Bottom Copyright Bar -->
+            <div class="row align-items-center pt-2">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="text-white-50 mb-0 small">
+                        &copy; 2025 <strong class="text-white">Prisma</strong>. All rights reserved. Designed with
+                        passion for digital excellence.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-inline-flex gap-3 small">
+                        <a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a>
+                        <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a>
+                        <a href="#" class="text-white-50 text-decoration-none">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button (Bootstrap Fixed Utility) -->
+    <button type="button" id="backToTop" class="btn btn-danger btn-lg rounded-circle shadow-lg position-fixed d-none"
+        style="z-index: 1030; bottom: 20px; right: 20px;" title="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Minimal Functional Scripts -->
+    <script>
+        // Back to Top Button Scroll Behavior
+        const backToTopBtn = document.getElementById("backToTop");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove("d-none");
+            } else {
+                backToTopBtn.classList.add("d-none");
+            }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>
