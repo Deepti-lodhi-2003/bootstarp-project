@@ -33,6 +33,94 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
+        /* Mobile container safe margins */
+        @media (max-width: 767.98px) {
+            .container {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+
+        /* Mobile Navbar Overlay (Floats on top instead of pushing content down) */
+        @media (max-width: 991.98px) {
+            #secondnav {
+                position: sticky;
+                top: 0;
+                z-index: 1040;
+            }
+            #secondnav .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                padding: 1.25rem 1.5rem;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+                border-bottom: 3px solid #dc3545;
+                border-radius: 0 0 1rem 1rem;
+                z-index: 1050;
+                max-height: 85vh;
+                overflow-y: auto;
+            }
+            #secondnav .navbar-nav .nav-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            #secondnav .navbar-nav .nav-link {
+                padding: 0.75rem 0.5rem;
+                font-size: 1.05rem;
+            }
+        }
+
+        /* Highly visible, modern floating carousel control buttons */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 44px;
+            height: 44px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(220, 53, 69, 0.9) !important;
+            border: 2px solid rgba(255, 255, 255, 0.7) !important;
+            border-radius: 50% !important;
+            opacity: 0.95 !important;
+            transition: all 0.25s ease-in-out;
+            z-index: 10;
+        }
+
+        .carousel-control-prev {
+            left: 14px !important;
+        }
+
+        .carousel-control-next {
+            right: 14px !important;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: #dc3545 !important;
+            transform: translateY(-50%) scale(1.1);
+            opacity: 1 !important;
+            box-shadow: 0 0.5rem 1.5rem rgba(220, 53, 69, 0.5);
+        }
+
+        /* Footer Newsletter Input High Contrast */
+        .footer-newsletter-input {
+            background-color: rgba(255, 255, 255, 0.12) !important;
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .footer-newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.75) !important;
+            opacity: 1 !important;
+        }
+
+        .footer-newsletter-input:focus {
+            background-color: rgba(255, 255, 255, 0.18) !important;
+            color: #ffffff !important;
+            border-color: #dc3545 !important;
+            box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.3) !important;
+        }
+
         /* Subtle interactive micro-animation for cards */
         .hover-lift {
             transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -147,9 +235,9 @@
                 <!-- Bootstrap Dark Gradient Overlay -->
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
 
-                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                <div class="position-relative container h-100 d-flex align-items-center py-5 px-4 px-md-3 z-1">
                     <div class="row w-100 mx-0">
-                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-2 px-sm-3">
                             <span
                                 class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
                                 <i class="ri-sparkling-fill"></i> WE CRAFT DIGITAL EXPERIENCES
@@ -231,9 +319,9 @@
                     alt="Creative Digital Studio">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
 
-                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                <div class="position-relative container h-100 d-flex align-items-center py-5 px-4 px-md-3 z-1">
                     <div class="row w-100 mx-0">
-                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-2 px-sm-3">
                             <span
                                 class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
                                 <i class="ri-rocket-2-fill"></i> NEXT-GENERATION AGENCY
@@ -310,9 +398,9 @@
                     alt="Innovative Digital Workspace">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
 
-                <div class="position-relative container h-100 d-flex align-items-center py-5 z-1">
+                <div class="position-relative container h-100 d-flex align-items-center py-5 px-4 px-md-3 z-1">
                     <div class="row w-100 mx-0">
-                        <div class="col-12 col-lg-10 col-xl-8 text-start px-0">
+                        <div class="col-12 col-lg-10 col-xl-8 text-start px-2 px-sm-3">
                             <span
                                 class="badge bg-danger bg-opacity-25 text-danger border border-danger-subtle px-3 py-2 rounded-pill fw-semibold mb-3 fs-6 d-inline-flex align-items-center gap-2">
                                 <i class="ri-flashlight-fill"></i> INNOVATION & RESULTS
@@ -384,13 +472,13 @@
         </div>
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev"
+        <button class="carousel-control-prev shadow" type="button" data-bs-target="#home" data-bs-slide="prev"
             aria-label="Previous Slide">
-            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+            <i class="ri-arrow-left-s-line fs-3 text-white"></i>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next"
+        <button class="carousel-control-next shadow" type="button" data-bs-target="#home" data-bs-slide="next"
             aria-label="Next Slide">
-            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+            <i class="ri-arrow-right-s-line fs-3 text-white"></i>
         </button>
     </div>
 
@@ -784,14 +872,15 @@
 
             <div class="row justify-content-center g-4">
                 <!-- Member 1 -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-11 col-sm-6 col-lg-3 mx-auto">
                     <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                             alt="Martin Hoffmann" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
                             style="width: 130px; height: 130px;">
                         <h5 class="fw-bold text-dark mb-1">Martin Hoffmann</h5>
-                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Chief Creative Officer
-                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-2 fw-medium d-inline-block">Chief Creative Officer</span>
+                        </div>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
                                 style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
@@ -807,14 +896,15 @@
                 </div>
 
                 <!-- Member 2 -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-11 col-sm-6 col-lg-3 mx-auto">
                     <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face"
                             alt="Sophia Reynolds" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
                             style="width: 130px; height: 130px;">
                         <h5 class="fw-bold text-dark mb-1">Sophia Reynolds</h5>
-                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Head of UI/UX Design
-                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-2 fw-medium d-inline-block">Head of UI/UX Design</span>
+                        </div>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
                                 style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
@@ -830,14 +920,15 @@
                 </div>
 
                 <!-- Member 3 -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-11 col-sm-6 col-lg-3 mx-auto">
                     <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
                             alt="Joshua Murphy" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
                             style="width: 130px; height: 130px;">
                         <h5 class="fw-bold text-dark mb-1">Joshua Murphy</h5>
-                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Growth & Marketing VP
-                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-2 fw-medium d-inline-block">Growth & Marketing VP</span>
+                        </div>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
                                 style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
@@ -853,14 +944,15 @@
                 </div>
 
                 <!-- Member 4 -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-11 col-sm-6 col-lg-3 mx-auto">
                     <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100 hover-lift">
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
                             alt="Daniel Stewart" class="rounded-circle mx-auto mb-3 shadow-sm object-fit-cover"
                             style="width: 130px; height: 130px;">
                         <h5 class="fw-bold text-dark mb-1">Daniel Stewart</h5>
-                        <p class="badge bg-danger-subtle text-danger rounded-pill px-3 py-1 mb-3">Lead Fullstack
-                            Architect</p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill px-3 py-2 fw-medium d-inline-block">Lead Fullstack Architect</span>
+                        </div>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="#" class="btn btn-light btn-sm rounded-circle text-muted"
                                 style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i
@@ -1241,7 +1333,7 @@
                     <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Prisma insights!');">
                         <div class="input-group mb-2">
                             <input type="email"
-                                class="form-control rounded-start-pill bg-secondary bg-opacity-25 border-secondary text-white"
+                                class="form-control footer-newsletter-input rounded-start-pill"
                                 placeholder="Enter your email..." required>
                             <button class="btn btn-danger rounded-end-pill px-3" type="submit">
                                 <i class="ri-arrow-right-line"></i>
@@ -1287,6 +1379,20 @@
 
     <!-- Minimal Functional Scripts -->
     <script>
+        // Auto-close mobile navbar when any nav link is clicked
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link, #navbarNav .btn');
+        const navbarCollapse = document.getElementById('navbarNav');
+        if (navbarCollapse) {
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+
         // Back to Top Button Scroll Behavior
         const backToTopBtn = document.getElementById("backToTop");
         window.addEventListener("scroll", function () {
