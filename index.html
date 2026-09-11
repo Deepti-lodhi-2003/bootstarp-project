@@ -102,6 +102,76 @@
             box-shadow: 0 0.5rem 1.5rem rgba(220, 53, 69, 0.5);
         }
 
+        /* On mobile, position buttons at bottom corners to never overlap hero text */
+        @media (max-width: 767.98px) {
+            .carousel-control-prev,
+            .carousel-control-next {
+                top: auto !important;
+                bottom: 18px !important;
+                transform: none !important;
+                width: 38px !important;
+                height: 38px !important;
+            }
+
+            .carousel-control-prev {
+                left: 16px !important;
+            }
+
+            .carousel-control-next {
+                right: 16px !important;
+            }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                transform: scale(1.1) !important;
+            }
+
+            /* Mobile Hero Section: prevent clipping, frame image cleanly */
+            #home .carousel-item {
+                min-height: 590px !important;
+                height: auto !important;
+                padding-top: 2rem !important;
+                padding-bottom: 5.5rem !important;
+            }
+
+            #home .carousel-item .container {
+                height: auto !important;
+                min-height: auto !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 1rem !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+            }
+
+            #home .carousel-item img.hero-zoom {
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center top !important;
+            }
+
+            #home h1 {
+                font-size: 1.85rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 0.75rem !important;
+            }
+
+            #home p.lead {
+                font-size: 0.92rem !important;
+                line-height: 1.45 !important;
+                margin-bottom: 1.2rem !important;
+            }
+
+            #home .btn-lg {
+                padding: 0.65rem 1.25rem !important;
+                font-size: 0.95rem !important;
+            }
+        }
+
+        /* Uniform Stats Counter Boxes */
+        .stat-box {
+            min-height: 180px;
+        }
+
         /* Footer Newsletter Input High Contrast */
         .footer-newsletter-input {
             background-color: rgba(255, 255, 255, 0.12) !important;
@@ -571,37 +641,37 @@
         <div class="container py-3">
             <div class="row text-center g-4">
                 <div class="col-6 col-lg-3">
-                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
-                        <i class="ri-user-smile-line display-5 mb-2 d-block opacity-75"></i>
-                        <h2 class="display-5 fw-bold mb-1">90K+</h2>
-                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                    <div class="p-3 py-4 h-100 d-flex flex-column justify-content-center align-items-center bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift stat-box">
+                        <i class="ri-user-smile-line display-6 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-6 fw-bold mb-1">90K+</h2>
+                        <p class="mb-0 fw-semibold text-white-75 text-uppercase small" style="letter-spacing: 0.5px;">
                             Happy Clients</p>
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-3">
-                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
-                        <i class="ri-code-s-slash-line display-5 mb-2 d-block opacity-75"></i>
-                        <h2 class="display-5 fw-bold mb-1">45M+</h2>
-                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                    <div class="p-3 py-4 h-100 d-flex flex-column justify-content-center align-items-center bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift stat-box">
+                        <i class="ri-code-s-slash-line display-6 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-6 fw-bold mb-1">45M+</h2>
+                        <p class="mb-0 fw-semibold text-white-75 text-uppercase small" style="letter-spacing: 0.5px;">
                             Lines of Code</p>
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-3">
-                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
-                        <i class="ri-trophy-line display-5 mb-2 d-block opacity-75"></i>
-                        <h2 class="display-5 fw-bold mb-1">250+</h2>
-                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                    <div class="p-3 py-4 h-100 d-flex flex-column justify-content-center align-items-center bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift stat-box">
+                        <i class="ri-trophy-line display-6 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-6 fw-bold mb-1">250+</h2>
+                        <p class="mb-0 fw-semibold text-white-75 text-uppercase small" style="letter-spacing: 0.5px;">
                             Awards Won</p>
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-3">
-                    <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift">
-                        <i class="ri-group-line display-5 mb-2 d-block opacity-75"></i>
-                        <h2 class="display-5 fw-bold mb-1">380K+</h2>
-                        <p class="mb-0 fw-semibold text-white-50 text-uppercase small" style="letter-spacing: 1px;">
+                    <div class="p-3 py-4 h-100 d-flex flex-column justify-content-center align-items-center bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 hover-lift stat-box">
+                        <i class="ri-group-line display-6 mb-2 d-block opacity-75"></i>
+                        <h2 class="display-6 fw-bold mb-1">380K+</h2>
+                        <p class="mb-0 fw-semibold text-white-75 text-uppercase small" style="letter-spacing: 0.5px;">
                             Community Reach</p>
                     </div>
                 </div>
@@ -766,14 +836,14 @@
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
-                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            class="card-img w-100 object-fit-cover" style="height: 380px;"
                             alt="Next-Gen Fintech Portal">
                         <div
-                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-start p-4 text-white">
                             <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">FinTech / Web
                                 App</span>
-                            <h4 class="card-title fw-bold mb-1">Next-Gen Wealth & Investment Portal</h4>
-                            <p class="card-text text-white-50 small mb-3">Real-time portfolio analytics and
+                            <h4 class="card-title fw-bold mb-2">Next-Gen Wealth & Investment Portal</h4>
+                            <p class="card-text text-white-75 small mb-3">Real-time portfolio analytics and
                                 high-frequency trading interface for 500k+ global users.</p>
                             <div>
                                 <a href="#contact"
@@ -788,14 +858,14 @@
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
-                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            class="card-img w-100 object-fit-cover" style="height: 380px;"
                             alt="E-Commerce Brand Transformation">
                         <div
-                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-start p-4 text-white">
                             <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">E-Commerce /
                                 Branding</span>
-                            <h4 class="card-title fw-bold mb-1">Direct-To-Consumer Lifestyle Store</h4>
-                            <p class="card-text text-white-50 small mb-3">Headless Shopify Plus store that boosted
+                            <h4 class="card-title fw-bold mb-2">Direct-To-Consumer Lifestyle Store</h4>
+                            <p class="card-text text-white-75 small mb-3">Headless Shopify Plus store that boosted
                                 digital conversion rates by 142% within 90 days.</p>
                             <div>
                                 <a href="#contact"
@@ -810,14 +880,14 @@
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80"
-                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            class="card-img w-100 object-fit-cover" style="height: 380px;"
                             alt="Cloud SaaS Intelligence">
                         <div
-                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-start p-4 text-white">
                             <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">SaaS /
                                 Cloud</span>
-                            <h4 class="card-title fw-bold mb-1">Enterprise Cloud Monitoring Dashboard</h4>
-                            <p class="card-text text-white-50 small mb-3">Designed an interactive observability
+                            <h4 class="card-title fw-bold mb-2">Enterprise Cloud Monitoring Dashboard</h4>
+                            <p class="card-text text-white-75 small mb-3">Designed an interactive observability
                                 dashboard for distributed cloud microservices.</p>
                             <div>
                                 <a href="#contact"
@@ -832,14 +902,14 @@
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden position-relative hover-lift">
                         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
-                            class="card-img w-100 object-fit-cover" style="height: 360px;"
+                            class="card-img w-100 object-fit-cover" style="height: 380px;"
                             alt="Telemedicine HealthTech Suite">
                         <div
-                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-end p-4 text-white">
+                            class="card-img-overlay bg-dark bg-opacity-75 d-flex flex-column justify-content-start p-4 text-white">
                             <span class="badge bg-danger rounded-pill align-self-start px-3 py-2 mb-2">HealthTech /
                                 Mobile</span>
-                            <h4 class="card-title fw-bold mb-1">AI-Powered Telemedicine Application</h4>
-                            <p class="card-text text-white-50 small mb-3">Connecting over 2 million patients with
+                            <h4 class="card-title fw-bold mb-2">AI-Powered Telemedicine Application</h4>
+                            <p class="card-text text-white-75 small mb-3">Connecting over 2 million patients with
                                 licensed medical providers via secure video consultation.</p>
                             <div>
                                 <a href="#contact"
